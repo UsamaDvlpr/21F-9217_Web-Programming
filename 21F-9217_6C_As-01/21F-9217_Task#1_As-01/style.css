@@ -1,0 +1,383 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: antiquewhite;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  background-color: rgb(54, 26, 61);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(168, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.nav-links a.active {
+  color: rgb(255, 255, 252);
+  text-decoration: underline;
+  text-decoration-style: 3px;
+  text-decoration-color: rgb(255, 235, 15);
+}
+
+.logo img,
+.logo span,
+.nav-links a {
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+  color: #69ff05;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo,
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+}
+
+.nav-links a:hover {
+  color: rgb(148, 136, 0);
+  text-decoration-style: underline;
+  transform: scale(1.1);
+}
+
+.nav-box {
+  width: 13px;
+  height: 13px;
+  background-color: yellow;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+
+.hero {
+  padding: 50px 0;
+}
+
+.hero-content {
+  font-family: 'Times New Roman', serif;
+  color: #000;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-content p,
+.hero-content img {
+  margin-left: 20px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.hero-content p:hover,
+.hero-content img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  background-color: rgb(29, 5, 69);
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: #1f0768;
+}
+
+.container2 {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-icons img {
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.column:hover {
+  color: #ffcc00;
+}
+
+.column h3 {
+  color: yellow;
+}
+
+.disclaimer {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .nav-links {
+      display: none;
+  }
+
+  .nav-links.active a {
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar {
+      position: relative;
+  }
+
+  .hero-content p {
+      padding: 10px;
+  }
+
+  .footer-columns {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .social-icons img {
+      margin-bottom: 10px;
+  }
+}
+
+/*-------------------- About and Services page styling ----------------------*/
+
+.container3 {
+  max-width: 80%;
+  margin: 50px auto;
+}
+
+.about-section, .mission-section {
+  background-color: #c2dedf;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+.pa {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .container3 {
+    max-width: 90%;
+  }
+
+  .about-section, .mission-section {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container3 {
+    max-width: 95%;
+  }
+}
+
+
+/*---------------------- Portfolio page styling --------------------*/
+
+section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+section #projects {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.project {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.project a {
+  display: block;
+  background-color: #2979FF;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.project a:hover {
+  background-color: #4CAF50;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  section h1 {
+    font-size: 36px;
+  }
+  
+  section img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  section #projects .project {
+    max-width: 100%;
+  }
+}
+
+
+
+/*------------ Contact page styling --------------------*/
+/* General styling */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  display: block;
+  background-color: #2979FF;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #4CAF50;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+  }
+
+  .contact-form {
+    max-width: 400px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+}
