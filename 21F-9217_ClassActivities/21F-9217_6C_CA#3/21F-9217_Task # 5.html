@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- For this task, to replace the use of form, I have used alert feature of JS it take the input. -->
+    <script>
+        function printTable() {
+            var number = prompt("Enter any number to print its table:");
+
+            number = parseInt(number);
+
+            if (!isNaN(number)) {
+                document.write("<h2>Table of " + number + " is: </h2>");
+                document.write("<table>");
+                document.write("<tr><th>Multiplication</th><th>Result</th></tr>");
+
+                for (var i = 1; i <= 10; i++) {
+                    document.write("<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>");
+                }
+
+                document.write("</table>");
+            } else {
+                alert("Invalid input, Please enter a valid number.");
+            }
+        }
+
+        printTable();
+    </script>
+
+</body>
+
+</html>
