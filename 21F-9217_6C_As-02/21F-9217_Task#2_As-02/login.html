@@ -29,7 +29,37 @@
                     </form>
                 </div>
             </div>
-        </section> 
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const signInForm = document.querySelector('#signInForm');
+
+                signInForm.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent form submission
+
+                    const emailInput = signInForm.querySelector('input[type="email"]');
+                    const emailValue = emailInput.value.trim();
+                    if (!validateEmail(emailValue)) {
+                        showError(emailInput, 'Please enter a valid email address.');
+                    } else {
+                        removeError(emailInput);
+                    }
+
+                    const passwordInput = signInForm.querySelector('input[name="password"]');
+                    const passwordValue = passwordInput.value.trim();
+                    if (passwordValue.length < 8) {
+                        showError(passwordInput, 'Password must be at least 8 characters long.');
+                    } else {
+                        removeError(passwordInput);
+                    }
+
+                    if (!signInForm.querySelector('.error')) {
+                        signInForm.submit();
+                    }
+                });
+            });
+        </script>
     </body>
 </body>
 

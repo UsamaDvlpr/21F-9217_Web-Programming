@@ -17,29 +17,29 @@
                     <h2>Sign Up</h2>
                     <div class="left-section">
                         <div class="inputbox">
-                            <ion-icon name="person-outline"></ion-icon> 
+                            <ion-icon name="person-outline"></ion-icon>
                             <input type="text" required>
                             <label>Username</label>
                         </div>
                         <div class="inputbox">
-                            <ion-icon name="mail-outline"></ion-icon> 
+                            <ion-icon name="mail-outline"></ion-icon>
                             <input type="email" required>
                             <label>Email</label>
                         </div>
                         <div class="inputbox">
-                            <ion-icon name="lock-closed-outline"></ion-icon> 
+                            <ion-icon name="lock-closed-outline"></ion-icon>
                             <input type="password" required>
                             <label>Password</label>
                         </div>
                         <div class="inputbox">
-                            <ion-icon name="calendar-outline"></ion-icon> 
+                            <ion-icon name="calendar-outline"></ion-icon>
                             <input type="date" required>
                             <label></label>
                         </div>
                     </div>
                     <div class="right-section">
                         <div class="inputbox">
-                            <ion-icon name="transgender-outline"></ion-icon> 
+                            <ion-icon name="transgender-outline"></ion-icon>
                             <select required>
                                 <option value="" disabled selected>Gender</option>
                                 <option value="male">Male</option>
@@ -48,17 +48,17 @@
                             </select>
                         </div>
                         <div class="inputbox">
-                            <ion-icon name="call-outline"></ion-icon> 
+                            <ion-icon name="call-outline"></ion-icon>
                             <input type="tel" required>
                             <label>Phone Number</label>
                         </div>
                         <div class="inputbox">
-                            <ion-icon name="location-outline"></ion-icon> 
+                            <ion-icon name="location-outline"></ion-icon>
                             <input type="text" required>
                             <label>Zip Code</label>
                         </div>
                         <div class="inputbox">
-                            <ion-icon name="globe-outline"></ion-icon> 
+                            <ion-icon name="globe-outline"></ion-icon>
                             <input type="text" required>
                             <label>Country</label>
                         </div>
@@ -71,6 +71,95 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signUpForm = document.querySelector('#signUpForm');
+
+            signUpForm.addEventListener('submit', function (event) {
+                event.preventDefault(); 
+
+                const usernameInput = signUpForm.querySelector('input[name="username"]');
+                const usernameValue = usernameInput.value.trim();
+                if (usernameValue === '') {
+                    showError(usernameInput, 'Username is required.');
+                } else {
+                    removeError(usernameInput);
+                }
+
+                const emailInput = signUpForm.querySelector('input[type="email"]');
+                const emailValue = emailInput.value.trim();
+                if (!validateEmail(emailValue)) {
+                    showError(emailInput, 'Please enter a valid email address.');
+                } else {
+                    removeError(emailInput);
+                }
+
+                const passwordInput = signUpForm.querySelector('input[name="password"]');
+                const passwordValue = passwordInput.value.trim();
+                if (passwordValue.length < 8) {
+                    showError(passwordInput, 'Password must be at least 8 characters long.');
+                } else {
+                    removeError(passwordInput);
+                }
+
+                const birthdateInput = signUpForm.querySelector('input[name="birthdate"]');
+                const birthdateValue = birthdateInput.value.trim();
+                if (birthdateValue === '') {
+                    showError(birthdateInput, 'Birthdate is required.');
+                } else {
+                    removeError(birthdateInput);
+                }
+
+                const genderSelect = signUpForm.querySelector('select[name="gender"]');
+                const genderValue = genderSelect.value;
+                if (genderValue === '') {
+                    showError(genderSelect, 'Gender is required.');
+                } else {
+                    removeError(genderSelect);
+                }
+
+                const phoneNumberInput = signUpForm.querySelector('input[name="phoneNumber"]');
+                const phoneNumberValue = phoneNumberInput.value.trim();
+                if (!validatePhoneNumber(phoneNumberValue)) {
+                    showError(phoneNumberInput, 'Please enter a valid phone number.');
+                } else {
+                    removeError(phoneNumberInput);
+                }
+
+                const zipCodeInput = signUpForm.querySelector('input[name="zipCode"]');
+                const zipCodeValue = zipCodeInput.value.trim();
+                if (!validateZipCode(zipCodeValue)) {
+                    showError(zipCodeInput, 'Please enter a valid ZIP code.');
+                } else {
+                    removeError(zipCodeInput);
+                }
+
+                const countryInput = signUpForm.querySelector('input[name="country"]');
+                const countryValue = countryInput.value.trim();
+                if (countryValue === '') {
+                    showError(countryInput, 'Country is required.');
+                } else {
+                    removeError(countryInput);
+                }
+
+                if (!signUpForm.querySelector('.error')) {
+                    signUpForm.submit();
+                }
+            });
+        });
+
+        function validatePhoneNumber(phoneNumber) {
+            const re = /^\d{10}$/; 
+            return re.test(phoneNumber);
+        }
+
+        // Function to validate ZIP code format
+        function validateZipCode(zipCode) {
+            const re = /^\d{5}$/; 
+            return re.test(zipCode);
+        }
+    </script>
 
 </body>
 
