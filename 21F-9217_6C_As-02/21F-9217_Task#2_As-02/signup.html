@@ -5,7 +5,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Sign Up</title>
-    <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='styles2.css'>
 </head>
 
 <body>
@@ -15,14 +15,54 @@
             <div class="form-value">
                 <form>
                     <h2>Sign Up</h2>
-                    <div class="inputbox"> <ion-icon name="person-outline"></ion-icon> <input type="text" required>
-                        <label>Username</label>
+                    <div class="left-section">
+                        <div class="inputbox">
+                            <ion-icon name="person-outline"></ion-icon> 
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon> 
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon> 
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="calendar-outline"></ion-icon> 
+                            <input type="date" required>
+                            <label></label>
+                        </div>
                     </div>
-                    <div class="inputbox"> <ion-icon name="mail-outline"></ion-icon> <input type="email" required>
-                        <label>Email</label>
+                    <div class="right-section">
+                        <div class="inputbox">
+                            <ion-icon name="transgender-outline"></ion-icon> 
+                            <select required>
+                                <option value="" disabled selected>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="call-outline"></ion-icon> 
+                            <input type="tel" required>
+                            <label>Phone Number</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="location-outline"></ion-icon> 
+                            <input type="text" required>
+                            <label>Zip Code</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="globe-outline"></ion-icon> 
+                            <input type="text" required>
+                            <label>Country</label>
+                        </div>
                     </div>
-                    <div class="inputbox"> <ion-icon name="lock-closed-outline"></ion-icon> <input type="password"
-                            required> <label>Password</label> </div>
                     <button>Sign Up</button>
                     <div class="register">
                         <p>Already have an account? <a href="login.html">Log In</a></p>
