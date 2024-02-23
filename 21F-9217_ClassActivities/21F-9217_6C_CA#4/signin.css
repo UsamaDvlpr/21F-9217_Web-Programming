@@ -8,9 +8,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 101vh;
     width: 100%;
-    background: url("background.jpg") no-repeat;
+    background: url("bg-T2.jpg") no-repeat;
     background-position: center;
     background-size: cover;
 }
