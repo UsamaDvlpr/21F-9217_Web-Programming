@@ -31,7 +31,7 @@ ul li a{
     padding: 5px 20px;
     border: 2px rgb(255, 255, 255);
     border-style: solid transparent;
-    border-radius: 15px;
+    border-radius: 12px;
     transition: 0.5s ease;
 }
 
@@ -44,7 +44,9 @@ ul li a:hover{
 
 .logo img{
     float: left;
-    width: 150px;
+    width: 170px;
+    padding-left: 45px;
+    margin: -18px;
 }
 
 .buttonJoin{
@@ -58,6 +60,14 @@ ul li a:hover{
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.buttonJoin:hover {
+    background-color: #04AA6D;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
 }
 
 .main{
@@ -68,19 +78,18 @@ ul li a:hover{
 .title{
     position: absolute;
     top: 40%;
-    left: 15%;
+    left: 12%;
     transform: translate(-18%,-15%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .title h1{
     color: rgb(255, 255, 255);
-    font-size: 30px;
 }
 
 .title h4{
-    color: rgb(238, 229, 229);
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
 }
 
 button{
@@ -93,15 +102,26 @@ button{
     border-radius: 20px;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 10px;
+    transition: 0.5s ease;
+    zoom: 97%;
+}
+
+button:hover{
+    text-decoration: none;
+    background-color: #04AA6D;
+    color: white;
+    padding: 5px 20px;
+    border: transparent;
+    zoom: 100%;
 }
 
 input[type=text] {
-    padding: 6px;
+    padding: 7px;
     margin-top: 8px;
-    font-size: 18px;
+    font-size: 17px;
     border: none;
     padding-right: 230px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 input::placeholder {
