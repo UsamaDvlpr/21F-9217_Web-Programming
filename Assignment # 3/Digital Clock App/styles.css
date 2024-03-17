@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+* {
+    margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin-top: 30px;
+    color: white;
+    background: #f9dede;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4 {
+    margin: 15px;
+    width: 130px;
+    height: 140px;
+    box-shadow: 0 30px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-1 {
+    background-color: skyblue;
+}
+
+.box-2 {
+    background-color: greenyellow;
+}
+
+.box-3 {
+    background-color: orange;
+}
+
+.box-4 {
+    background-color: lightgreen;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    height: 40px;
+    line-height: 2;
+}
+
+div h1 {
+    font-size: 50px;
+    line-height: 170%;
+}
+
+.hour {
+    background-color: rgb(47, 168, 216);
+}
+
+.minute {
+    background-color: rgb(128, 209, 8)
+}
+
+.seconds {
+    background-color: rgb(185, 123, 8)
+}
+
+.period {
+    background-color: rgb(91, 226, 91)
+}
