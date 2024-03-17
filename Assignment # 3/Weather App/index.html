@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scriptApi.js"></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <div class="header">
+            <p>Weather Application</p>
+            <hr>
+        </div>
+        <div class="body">
+            <img id="image" src="" alt="" srcset="">
+            <p id="temp"></p>
+            <p id="desc"></p>
+            <p id="city-country"><i class="fa fa-map-marker" style="font-size:24px;">&nbsp;&nbsp;</i></p>
+        </div>
+        <div class="footer">
+            <table>
+                <tr>
+                    <td id="vertical">
+                        <p id="feels-like"></p>
+                    </td>
+                    <td>
+                        <p id="humidity"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="display">
+            <div class="header">
+                <p>Weather Application</p>
+                <hr>
+            </div>
+            <div class="body">
+                <input type="text" placeholder="Enter city name">
+                <hr><span>or</span>
+                <hr>
+                <button>Get Device Location</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container" style="display: none;">
+        <div class="display">
+            <div class="header">
+                <p>Weather Application</p>
+                <hr>
+            </div>
+            <div class="days">
+                <p id="day-0"></p>
+                <p id="day-1"></p>
+                <p id="day-2"></p>
+                <p id="day-3"></p>
+                <p id="day-4"></p>
+                <p id="day-5"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
