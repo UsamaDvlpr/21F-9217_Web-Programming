@@ -1,4 +1,4 @@
-![image](https://github.com/UsamaDvlpr/21F-9217_Web-Programming/assets/160348339/484bcd49-56e1-4dd8-87c5-09d1d3391a1f)## Assignment-3
+# Assignment-3
 
 ## Task 1:
 
